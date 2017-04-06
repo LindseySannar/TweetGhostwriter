@@ -2,20 +2,18 @@ function writeTweet()
 {
 var randIndex;
 var sentence;
-var intro = ["You know what gets me through the day?","Life is full of","Ever heard of","To be happy, one must embrace"];
-var body=["existentialism","a good bowl of wheaties","crippling anxieties","Poorly written Harry Potter Fan-fiction","The Unit Circle"];
-var end=["the end.","and,you know, maybe some other things"];
-randIndex=randomUpTo(intro.length);
-//cant figure out how o assign the value
+
+var intro = [" You know what gets me through the day ?","Life is full of"," Ever heard of "," To be happy, one must embrace "];
+randIndex=randomUpTo((intro.length)-1);
 sentence=intro[randIndex];
 
-randIndex=randomUpTo(body.length);
+var body=[" existentialism. "," a good bowl of wheaties. "," crippling anxieties. "," Poorly written Harry Potter Fan-fiction "," The Unit Circle "];
+randIndex=randomUpTo((body.length)-1);
+sentence+=body[randIndex];
 
-sentence=body[randIndex];
-
-randIndex=randomUpTo(end.length);
-
-sentence=end[randIndex];
+var end=[" the end."," and,you know, maybe some other things. "];
+randIndex=randomUpTo((end.length)-1);
+sentence+=end[randIndex];
 
 document.getElementById("tweet").innerHTML=sentence;
 }
